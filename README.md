@@ -26,6 +26,9 @@ Exercicio desenvolvido pela simp com objetivo de testar conhecimentos tecnicos
   - NodeJS + MongoDB
   - Realizar conexão com Cloudinary para armazenamento de arquivos.
 
+
+
+
 # HOW TO
 
 ## Node_modules install
@@ -58,7 +61,7 @@ A diferenca entre os dois sao:
 - start
   - utiliza o start padrao do node, tendo que resetar todo o servidor caso alguma mudanca seja feita
 
-# LOCAL
+## LOCAL
 
 API esta programada para iniciar o servidor na porta 3333, caso queira mudar, e apenas necessario mudar a variavel encontrado dentro do arquivo server.js:
 
@@ -66,9 +69,11 @@ API esta programada para iniciar o servidor na porta 3333, caso queira mudar, e 
 const port = process.env.PORT || PORTA QUE VC DESEJA;
 ```
 
-## DOCUMENTACAO
 
-# Rotas User
+
+# DOCUMENTACAO
+
+## Rotas User
 
 - POST /users
   - Cria usuario novo
@@ -128,7 +133,7 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
     - userId: String, obrigatorio.
     - bookId: String, obrigatorio.
 
-# Rotas Book
+## Rotas Book
 
 - POST /books
   - Cria usuario livro
