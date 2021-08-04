@@ -1,7 +1,3 @@
-# WARNING
-
-## Projeto realizado no OS Windows 10, nao testado de forma correta em outros OS
-
 # Teste de conhecimentos SIMP Digital
 
 Exercicio desenvolvido pela simp com objetivo de testar conhecimentos tecnicos
