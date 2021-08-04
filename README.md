@@ -63,4 +63,4 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
 
 ## ROTAS INSOMNIA
 
-[JSON insomnia](https://deepbag.github.io/teste_conhecimentos_simp/blob/master/simp_routes.json
+[JSON insomnia](https://deepbag.github.io/teste_conhecimentos_simp/simp_routes.json)
