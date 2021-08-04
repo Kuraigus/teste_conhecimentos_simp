@@ -1,25 +1,27 @@
 const Book = require("../model/book.model");
 
 exports.create = (req, res) => {
-  if (!req.body.content)
+  const { titulo, autor, editora, edicao } = req.body;
+
+  if (!titulo || !autor || !editora || !edicao)
     return res.status(400).send({
-      message: "Conteudo do livro nao pode ser vazio!",
+      message: "Faltando alguma informacao do livro!",
     });
 
   const book = new Book({
-    titulo: req.body.titulo,
-    autor: req.body.autor,
-    editora: req.body.editora,
-    edicao: req.body.edicao,
+    titulo,
+    autor,
+    editora,
+    edicao,
   });
 
   book
     .save()
     .then((data) => {
-      res.send(data);
+      return res.send(data);
     })
     .catch((err) => {
-      res.status(500).send({
+      return res.status(500).send({
         message: err.message || "Algum erro aconteceu ao criar o livro!",
       });
     });
@@ -28,10 +30,10 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   Book.find()
     .then((books) => {
-      res.send(books);
+      return res.send(books);
     })
     .catch((err) => {
-      res.status(500).send({
+      return res.status(500).send({
         message: err.message || "Algum erro aconteceu ao recuperar os livros!",
       });
     });
@@ -64,6 +66,12 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
   const { titulo, autor, editora, edicao } = req.body;
   const { bookId } = req.params;
+
+  if (!titulo && !autor && !editora && !edicao) {
+    return res.status(404).send({
+      message: "Nenhum parametro foi enviado!",
+    });
+  }
 
   Book.findByIdAndUpdate(
     bookId,

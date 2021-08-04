@@ -1,24 +1,26 @@
 const User = require("../model/user.model");
 
 exports.create = (req, res) => {
-  if (!req.body.content)
+  const { nome, email, senha } = req.body;
+
+  if (!nome || !email || !senha)
     return res.status(400).send({
-      message: "Conteudo do livro nao pode ser vazio!",
+      message: "Faltando alguma informacao do livro!",
     });
 
   const user = new User({
-    nome: req.body.nome,
-    email: req.body.email,
-    senha: req.body.senha,
+    nome,
+    email,
+    senha,
   });
 
   user
     .save()
     .then((data) => {
-      res.send(data);
+      return res.send(data);
     })
     .catch((err) => {
-      res.status(500).send({
+      return res.status(500).send({
         message: err.message || "Algum erro aconteceu ao criar o usuario!",
       });
     });
@@ -27,10 +29,10 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
   User.find()
     .then((users) => {
-      res.send(users);
+      return res.send(users);
     })
     .catch((err) => {
-      res.status(500).send({
+      return res.status(500).send({
         message:
           err.message || "Algum erro aconteceu ao recuperar os usuarios!",
       });
@@ -40,7 +42,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
   const { userId } = req.params;
 
-  Book.findById(userId)
+  User.findById(userId)
     .then((user) => {
       if (!user) {
         return res.status(404).send({
@@ -65,7 +67,13 @@ exports.update = (req, res) => {
   const { nome, email, senha } = req.body;
   const { userId } = req.params;
 
-  Book.findByIdAndUpdate(
+  if (!nome && !email && !senha) {
+    return res.status(404).send({
+      message: "Nenhum parametro foi enviado!",
+    });
+  }
+
+  User.findByIdAndUpdate(
     userId,
     {
       nome,
@@ -97,7 +105,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
   const { userId } = req.params;
 
-  Book.findByIdAndRemove(userId)
+  User.findByIdAndRemove(userId)
     .then((user) => {
       if (!user) {
         return res.status(404).send({
