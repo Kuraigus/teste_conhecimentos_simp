@@ -48,14 +48,13 @@ dentro do .env.examples existe o exemplo do que voce precisa para o arquivo do .
 Existem duas maneiras para se iniciar o servidor, sendo elas:
 
 ```
-npm run StartServer
+npm run dev
 npm run start
 ```
 
 A diferenca entre os dois sao:
 
-- StartServer
-
+- dev
   - utiliza o pacote nodemon, logo o servidor atualiza mudancas automaticamente
 
 - start
@@ -87,6 +86,12 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
   - Params:
     - Nao requer params.
 
+  - Possiveis Retornos:
+    - 200 
+      - body com informacoes do user criado
+    - 500
+      - Erro interno ao criar usuario
+
 - GET /users
   - Lista todos usuarios
 
@@ -96,6 +101,13 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
   - Params:
     - Nao requer params.
 
+  - Possiveis Retornos:
+    - 200 
+      - body com lista de users
+    - 500
+      - Erro interno ao listar usuarios
+
+
 - GET /users/:userId
   - Lista Usuario especifico.
 
@@ -104,6 +116,12 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
 
   - Params:
     - userId: String, obrigatorio.
+  
+  - Possiveis Retornos:
+    - 200
+      - Body com informacao do user
+    - 404
+      - ID do user nao encontrado
 
 - PUT /users/:userId
   - Atualiza Usuario especifico.
@@ -114,6 +132,12 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
   - Params:
     - userId: String, obrigatorio.
 
+  - Possiveis Retornos:
+    - 200
+      - Body com informacao do user com a atualizacao
+    - 500
+      - Erro interno ao tentar atualizar o user
+
 - DELETE /users/:userId
   - Deleta Usuario especifico.
 
@@ -122,6 +146,12 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
 
   - Params:
     - userId: String, obrigatorio.
+  
+  - Possiveis Retornos:
+    - 200
+      - body com a mensagem "User deletado com sucesso"
+    - 404
+      - ID do user nao encontrado
 
 - PUT /users/:userId/book/:bookId
   - Adiciona um livro no catalogo do usuario.
@@ -132,6 +162,14 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
   - Params:
     - userId: String, obrigatorio.
     - bookId: String, obrigatorio.
+  
+  - Possiveis Retornos:
+    - 200
+      - Body com informacao do user
+    - 404
+      - ID do livro nao encontrado
+    - 500
+      - Erro interno ao adicionar livro no catalogo
 
 ## Rotas Book
 
@@ -146,6 +184,12 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
 
   - Params:
     - Nao requer params.
+  
+  - Possiveis Retornos:
+    - 200 
+      - body com informacoes do livro criado
+    - 500
+      - Erro interno ao criar o livro
 
 - GET /books
   - Lista todos livros
@@ -155,6 +199,13 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
 
   - Params:
     - Nao requer params.
+  
+  - Possiveis Retornos:
+    - 200 
+      - body com lista de livros
+    - 500
+      - Erro interno ao listar livros
+  
 
 - GET /books/:bookId
   - Lista livro especifico.
@@ -165,6 +216,13 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
   - Params:
     - bookId: String, obrigatorio.
 
+  - Possiveis Retornos:
+    - 200
+      - Body com informacao do livro
+    - 404
+      - ID do livro nao encontrado
+
+
 - PUT /books/:bookId
   - Atualiza livro especifico.
 
@@ -174,6 +232,12 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
   - Params:
     - bookId: String, obrigatorio.
 
+  - Possiveis Retornos:
+    - 200
+      - Body com informacao do livro com a atualizacao
+    - 500
+      - Erro interno ao tentar atualizar o livro
+
 - DELETE /books/:bookId
   - Deleta livro especifico.
 
@@ -182,4 +246,10 @@ const port = process.env.PORT || PORTA QUE VC DESEJA;
 
   - Params:
     - bookId: String, obrigatorio.
+  
+  - Possiveis Retornos:
+    - 200
+      - body com a mensagem "Livro deletado com sucesso"
+    - 404
+      - ID do livro nao encontrado
 
