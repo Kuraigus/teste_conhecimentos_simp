@@ -14,7 +14,7 @@ routes.get("/users", userController.findAll);
 routes.get("/users/:userId", userController.findOne);
 routes.put("/users/:userId", userController.update);
 routes.delete("/users/:userId", userController.delete);
-routes.put("/users/:userId/add_book/:bookId", userController.addBook);
+routes.put("/users/:userId/book/:bookId", userController.addBook);
 
 //rotas de Book
 routes.post("/books", bookController.create);

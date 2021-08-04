@@ -2,6 +2,11 @@
 
 Exercicio desenvolvido pela simp com objetivo de testar conhecimentos tecnicos
 
+# Contextualizacao:
+
+- Sistema para gestão de catálogo de livros
+- É necessário cadastrar os usuários e os livros daquele usuário
+
 # Requisitos:
 
 - CRUD de Usuário:
@@ -53,10 +58,123 @@ A diferenca entre os dois sao:
 - start
   - utiliza o start padrao do node, tendo que resetar todo o servidor caso alguma mudanca seja feita
 
-## LOCAL
+# LOCAL
 
 API esta programada para iniciar o servidor na porta 3333, caso queira mudar, e apenas necessario mudar a variavel encontrado dentro do arquivo server.js:
 
 ```javascript
 const port = process.env.PORT || PORTA QUE VC DESEJA;
 ```
+
+## DOCUMENTACAO
+
+# Rotas User
+
+- POST /users
+  - Cria usuario novo
+
+  - Body:
+    - ProfilePicture: Arquivo JPG, obrigatorio.
+    - Nome: String, obrigatorio.
+    - Email: String, obrigatorio.
+    - Senha: String, obrigatorio.
+
+  - Params:
+    - Nao requer params.
+
+- GET /users
+  - Lista todos usuarios
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - Nao requer params.
+
+- GET /users/:userId
+  - Lista Usuario especifico.
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - userId: String, obrigatorio.
+
+- PUT /users/:userId
+  - Atualiza Usuario especifico.
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - userId: String, obrigatorio.
+
+- DELETE /users/:userId
+  - Deleta Usuario especifico.
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - userId: String, obrigatorio.
+
+- PUT /users/:userId/book/:bookId
+  - Adiciona um livro no catalogo do usuario.
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - userId: String, obrigatorio.
+    - bookId: String, obrigatorio.
+
+# Rotas Book
+
+- POST /books
+  - Cria usuario livro
+
+  - Body:
+    - Titulo: String, obrigatorio.
+    - Autor: String, obrigatorio.
+    - editora: String, obrigatorio.
+    - edicao: String, obrigatorio.
+
+  - Params:
+    - Nao requer params.
+
+- GET /books
+  - Lista todos livros
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - Nao requer params.
+
+- GET /books/:bookId
+  - Lista livro especifico.
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - bookId: String, obrigatorio.
+
+- PUT /books/:bookId
+  - Atualiza livro especifico.
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - bookId: String, obrigatorio.
+
+- DELETE /books/:bookId
+  - Deleta livro especifico.
+
+  - Body:
+    - Nao requer body
+
+  - Params:
+    - bookId: String, obrigatorio.
+
