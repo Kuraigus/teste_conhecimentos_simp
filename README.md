@@ -60,7 +60,3 @@ API esta programada para iniciar o servidor na porta 3333, caso queira mudar, e 
 ```javascript
 const port = process.env.PORT || PORTA QUE VC DESEJA;
 ```
-
-## ROTAS INSOMNIA
-
-[JSON insomnia](https://deepbag.github.io/teste_conhecimentos_simp/simp_routes.json)
