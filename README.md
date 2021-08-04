@@ -5,21 +5,21 @@ Exercicio desenvolvido pela simp com objetivo de testar conhecimentos tecnicos
 # Requisitos:
 
 - CRUD de Usuário:
-	- Nome
-	- Email
-	- Senha
-	- Foto de Perfil
+  - Nome
+  - Email
+  - Senha
+  - Foto de Perfil
 - CRUD de Livros:
-	- Título
-	- Autor
-	- Editora
-	- Edição
+  - Título
+  - Autor
+  - Editora
+  - Edição
 
 # Tecnologias
 
 - Backend:
-    - NodeJS + MongoDB
-	- Realizar conexão com Cloudinary para armazenamento de arquivos.
+  - NodeJS + MongoDB
+  - Realizar conexão com Cloudinary para armazenamento de arquivos.
 
 # HOW TO
 
@@ -47,10 +47,11 @@ npm run start
 A diferenca entre os dois sao:
 
 - StartServer
-    - utiliza o pacote nodemon, logo o servidor atualiza mudancas automaticamente
+
+  - utiliza o pacote nodemon, logo o servidor atualiza mudancas automaticamente
 
 - start
-    - utiliza o start padrao do node, tendo que resetar todo o servidor caso alguma mudanca seja feita
+  - utiliza o start padrao do node, tendo que resetar todo o servidor caso alguma mudanca seja feita
 
 ## LOCAL
 
@@ -59,3 +60,7 @@ API esta programada para iniciar o servidor na porta 3333, caso queira mudar, e 
 ```javascript
 const port = process.env.PORT || PORTA QUE VC DESEJA;
 ```
+
+## ROTAS INSOMNIA
+
+[JSON insomnia](https://raw.githubusercontent.com/Kuraigus/teste_conhecimentos_simp/master/simp_routes.json)
