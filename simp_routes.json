@@ -1,1 +1,421 @@
-{"_type":"export","__export_format":4,"__export_date":"2021-08-04T05:51:05.874Z","__export_source":"insomnia.desktop.app:v2021.4.1","resources":[{"_id":"req_30e84ac6c41a41da95c2e92b22aaa667","parentId":"fld_6fe56e2a8dd04d0d826ac57d97eff2dc","modified":1628056136633,"created":1628041933372,"url":"{{ _.base_url }}/users/:userId","name":"deletar user","description":"","method":"DELETE","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628041933372,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_6fe56e2a8dd04d0d826ac57d97eff2dc","parentId":"wrk_dd01cab60bdf4fd897e53bb35aec4bd6","modified":1628041937918,"created":1628041937918,"name":"user","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1628041937918,"_type":"request_group"},{"_id":"wrk_dd01cab60bdf4fd897e53bb35aec4bd6","parentId":null,"modified":1628041834750,"created":1628041834750,"name":"simp","description":"","scope":"collection","_type":"workspace"},{"_id":"req_37fb553ba7dc43b79047e8d0589b500e","parentId":"fld_6fe56e2a8dd04d0d826ac57d97eff2dc","modified":1628051013025,"created":1628041924009,"url":"{{ _.base_url }}/users/:userId","name":"atualizar user","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n  \"senha\": \"senhatest3e\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json","id":"pair_85e27a51293d4a9b8afab7c69710456a"}],"authentication":{},"metaSortKey":-1628041933347,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_8f114a8bb4cb4b7bb2d0aaeefcd26a8e","parentId":"fld_6fe56e2a8dd04d0d826ac57d97eff2dc","modified":1628042466336,"created":1628041886128,"url":"{{ _.base_url }}/users","name":"pegar todos user","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628041933334.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_c1c88d72a43f436c838baad8d3a1bfda","parentId":"fld_6fe56e2a8dd04d0d826ac57d97eff2dc","modified":1628051008617,"created":1628041903118,"url":"{{ _.base_url }}/users/:userId","name":"user especifico","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628041933322,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_f500060156a741578a76e9ffd4170d54","parentId":"fld_6fe56e2a8dd04d0d826ac57d97eff2dc","modified":1628053583858,"created":1628041875452,"url":"{{ _.base_url }}/users","name":"create user","description":"","method":"POST","body":{"mimeType":"multipart/form-data","params":[{"name":"profilePicture","value":"","id":"pair_3e4bb0c45e3544068ba8860a1571189b","type":"file","fileName":"C:\\Users\\Kuraigus\\Downloads\\profilepicture.jpg"},{"id":"pair_bbbea5cb4b9649f7acf07fdd36ea9df0","name":"nome","value":"usuarioteste3","description":""},{"id":"pair_d6301c5432fa436ab86f45b404721af8","name":"email","value":"email@valido.com","description":""},{"id":"pair_b698b9983b8645039986a4d30e686db8","name":"senha","value":"senhateste","description":""}]},"parameters":[],"headers":[{"name":"Content-Type","value":"multipart/form-data","id":"pair_be781eff99344a21b3da71ec12c2cb65"},{"id":"pair_93a0708668d24051a7a7357837ef057a","name":"","value":"","description":""}],"authentication":{},"metaSortKey":-1628041933272,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b2ac8aff51fd499287081f6ad94dbb95","parentId":"fld_94702d06f76940698cdfc3c712073a7d","modified":1628050990438,"created":1628041977984,"url":"{{ _.base_url }}/books/:bookId","name":"deletar book","description":"","method":"DELETE","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628041933372,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_94702d06f76940698cdfc3c712073a7d","parentId":"wrk_dd01cab60bdf4fd897e53bb35aec4bd6","modified":1628041977974,"created":1628041977974,"name":"books","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1623233855168.5,"_type":"request_group"},{"_id":"req_145ecceae1284e89b7181d2d4c65c980","parentId":"fld_94702d06f76940698cdfc3c712073a7d","modified":1628050996605,"created":1628041977981,"url":"{{ _.base_url }}/books/:bookId","name":"atualizar book","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n  \"edicao\": \"supernova\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json","id":"pair_475614fe7ca54f5b8fed91d692546189"}],"authentication":{},"metaSortKey":-1628041933347,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_40aff2e73b0b4e07a3642f540079c0d5","parentId":"fld_94702d06f76940698cdfc3c712073a7d","modified":1628049836224,"created":1628041977978,"url":"{{ _.base_url }}/books","name":"pegar todos books","description":"","method":"GET","body":{},"parameters":[{"id":"pair_beffba33d0dc4267a311fc45e0bae09b","name":"","value":"","description":""}],"headers":[],"authentication":{},"metaSortKey":-1628041933334.5,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_556b2d9b3677447d9e5c78520c1b87bf","parentId":"fld_94702d06f76940698cdfc3c712073a7d","modified":1628050999783,"created":1628041977979,"url":"{{ _.base_url }}/books/:bookId","name":"book especifico","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628041933322,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_571b885f03174ac39061c6517b7b0f33","parentId":"fld_94702d06f76940698cdfc3c712073a7d","modified":1628053541998,"created":1628041977976,"url":"{{ _.base_url }}/books","name":"create book","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"titulo\": \"Senhor dos aneis 3\",\n  \"autor\": \"J. R. R. Tolkien\",\n  \"editora\": \"Harper Collins\",\n\t \"edicao\": \"artenova\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json","id":"pair_16db8c61f0d84fce8525c1eef419c534"}],"authentication":{},"metaSortKey":-1628041933272,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_74398aa481380b534a68ebe639b76cf1c6cb2b8c","parentId":"wrk_dd01cab60bdf4fd897e53bb35aec4bd6","modified":1628056224041,"created":1628041834867,"name":"Base Environment","data":{},"dataPropertyOrder":{},"color":null,"isPrivate":false,"metaSortKey":1628041834867,"_type":"environment"},{"_id":"jar_74398aa481380b534a68ebe639b76cf1c6cb2b8c","parentId":"wrk_dd01cab60bdf4fd897e53bb35aec4bd6","modified":1628041834869,"created":1628041834869,"name":"Default Jar","cookies":[],"_type":"cookie_jar"},{"_id":"spc_2e1d5112131f466da9ab921fc4d0f09a","parentId":"wrk_dd01cab60bdf4fd897e53bb35aec4bd6","modified":1628041834752,"created":1628041834752,"fileName":"simp","contents":"","contentType":"yaml","_type":"api_spec"},{"_id":"env_b8e9bd7842d94ca7a798e107cd0a4528","parentId":"env_74398aa481380b534a68ebe639b76cf1c6cb2b8c","modified":1628056228765,"created":1628056212039,"name":"local","data":{"base_url":"http://localhost:3333"},"dataPropertyOrder":{"&":["base_url"]},"color":null,"isPrivate":false,"metaSortKey":1628056212039,"_type":"environment"}]}
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2021-08-04T15:16:20.286Z",
+    "__export_source": "insomnia.desktop.app:v2021.4.1",
+    "resources": [
+        {
+            "_id": "req_8f06c499276940fba228fe44edc5b780",
+            "parentId": "fld_6fe56e2a8dd04d0d826ac57d97eff2dc",
+            "modified": 1628090154488,
+            "created": 1628089859545,
+            "url": "{{ _.base_url }}/users/:userId/add_book/:bookId",
+            "name": "add book",
+            "description": "",
+            "method": "PUT",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1628089859545,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_6fe56e2a8dd04d0d826ac57d97eff2dc",
+            "parentId": "wrk_dd01cab60bdf4fd897e53bb35aec4bd6",
+            "modified": 1628041937918,
+            "created": 1628041937918,
+            "name": "user",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1628041937918,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_dd01cab60bdf4fd897e53bb35aec4bd6",
+            "parentId": null,
+            "modified": 1628041834750,
+            "created": 1628041834750,
+            "name": "simp",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_30e84ac6c41a41da95c2e92b22aaa667",
+            "parentId": "fld_6fe56e2a8dd04d0d826ac57d97eff2dc",
+            "modified": 1628056136633,
+            "created": 1628041933372,
+            "url": "{{ _.base_url }}/users/:userId",
+            "name": "deletar user",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1628041933372,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_37fb553ba7dc43b79047e8d0589b500e",
+            "parentId": "fld_6fe56e2a8dd04d0d826ac57d97eff2dc",
+            "modified": 1628051013025,
+            "created": 1628041924009,
+            "url": "{{ _.base_url }}/users/:userId",
+            "name": "atualizar user",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"senha\": \"senhatest3e\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_85e27a51293d4a9b8afab7c69710456a"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1628041933347,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_8f114a8bb4cb4b7bb2d0aaeefcd26a8e",
+            "parentId": "fld_6fe56e2a8dd04d0d826ac57d97eff2dc",
+            "modified": 1628042466336,
+            "created": 1628041886128,
+            "url": "{{ _.base_url }}/users",
+            "name": "pegar todos user",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1628041933334.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_c1c88d72a43f436c838baad8d3a1bfda",
+            "parentId": "fld_6fe56e2a8dd04d0d826ac57d97eff2dc",
+            "modified": 1628051008617,
+            "created": 1628041903118,
+            "url": "{{ _.base_url }}/users/:userId",
+            "name": "user especifico",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1628041933322,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_f500060156a741578a76e9ffd4170d54",
+            "parentId": "fld_6fe56e2a8dd04d0d826ac57d97eff2dc",
+            "modified": 1628053583858,
+            "created": 1628041875452,
+            "url": "{{ _.base_url }}/users",
+            "name": "create user",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "multipart/form-data",
+                "params": [
+                    {
+                        "name": "profilePicture",
+                        "value": "",
+                        "id": "pair_3e4bb0c45e3544068ba8860a1571189b",
+                        "type": "file",
+                        "fileName": "C:\\Users\\Kuraigus\\Downloads\\profilepicture.jpg"
+                    },
+                    {
+                        "id": "pair_bbbea5cb4b9649f7acf07fdd36ea9df0",
+                        "name": "nome",
+                        "value": "usuarioteste3",
+                        "description": ""
+                    },
+                    {
+                        "id": "pair_d6301c5432fa436ab86f45b404721af8",
+                        "name": "email",
+                        "value": "email@valido.com",
+                        "description": ""
+                    },
+                    {
+                        "id": "pair_b698b9983b8645039986a4d30e686db8",
+                        "name": "senha",
+                        "value": "senhateste",
+                        "description": ""
+                    }
+                ]
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "multipart/form-data",
+                    "id": "pair_be781eff99344a21b3da71ec12c2cb65"
+                },
+                {
+                    "id": "pair_93a0708668d24051a7a7357837ef057a",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1628041933272,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b2ac8aff51fd499287081f6ad94dbb95",
+            "parentId": "fld_94702d06f76940698cdfc3c712073a7d",
+            "modified": 1628050990438,
+            "created": 1628041977984,
+            "url": "{{ _.base_url }}/books/:bookId",
+            "name": "deletar book",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1628041933372,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_94702d06f76940698cdfc3c712073a7d",
+            "parentId": "wrk_dd01cab60bdf4fd897e53bb35aec4bd6",
+            "modified": 1628041977974,
+            "created": 1628041977974,
+            "name": "books",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1623233855168.5,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_145ecceae1284e89b7181d2d4c65c980",
+            "parentId": "fld_94702d06f76940698cdfc3c712073a7d",
+            "modified": 1628050996605,
+            "created": 1628041977981,
+            "url": "{{ _.base_url }}/books/:bookId",
+            "name": "atualizar book",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"edicao\": \"supernova\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_475614fe7ca54f5b8fed91d692546189"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1628041933347,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_40aff2e73b0b4e07a3642f540079c0d5",
+            "parentId": "fld_94702d06f76940698cdfc3c712073a7d",
+            "modified": 1628049836224,
+            "created": 1628041977978,
+            "url": "{{ _.base_url }}/books",
+            "name": "pegar todos books",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_beffba33d0dc4267a311fc45e0bae09b",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1628041933334.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_556b2d9b3677447d9e5c78520c1b87bf",
+            "parentId": "fld_94702d06f76940698cdfc3c712073a7d",
+            "modified": 1628050999783,
+            "created": 1628041977979,
+            "url": "{{ _.base_url }}/books/:bookId",
+            "name": "book especifico",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1628041933322,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_571b885f03174ac39061c6517b7b0f33",
+            "parentId": "fld_94702d06f76940698cdfc3c712073a7d",
+            "modified": 1628053541998,
+            "created": 1628041977976,
+            "url": "{{ _.base_url }}/books",
+            "name": "create book",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"titulo\": \"Senhor dos aneis 3\",\n  \"autor\": \"J. R. R. Tolkien\",\n  \"editora\": \"Harper Collins\",\n\t \"edicao\": \"artenova\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_16db8c61f0d84fce8525c1eef419c534"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1628041933272,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_74398aa481380b534a68ebe639b76cf1c6cb2b8c",
+            "parentId": "wrk_dd01cab60bdf4fd897e53bb35aec4bd6",
+            "modified": 1628056224041,
+            "created": 1628041834867,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": {},
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1628041834867,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_74398aa481380b534a68ebe639b76cf1c6cb2b8c",
+            "parentId": "wrk_dd01cab60bdf4fd897e53bb35aec4bd6",
+            "modified": 1628041834869,
+            "created": 1628041834869,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_2e1d5112131f466da9ab921fc4d0f09a",
+            "parentId": "wrk_dd01cab60bdf4fd897e53bb35aec4bd6",
+            "modified": 1628041834752,
+            "created": 1628041834752,
+            "fileName": "simp",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        },
+        {
+            "_id": "env_b8e9bd7842d94ca7a798e107cd0a4528",
+            "parentId": "env_74398aa481380b534a68ebe639b76cf1c6cb2b8c",
+            "modified": 1628056228765,
+            "created": 1628056212039,
+            "name": "local",
+            "data": {
+                "base_url": "http://localhost:3333"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "base_url"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1628056212039,
+            "_type": "environment"
+        }
+    ]
+}

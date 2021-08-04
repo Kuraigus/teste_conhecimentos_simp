@@ -29,6 +29,10 @@ const UserSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    catalogo: {
+      type: Array,
+      required: true,
+    },
   },
   {
     timestamps: true,

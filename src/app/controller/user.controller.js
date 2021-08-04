@@ -69,3 +69,17 @@ exports.delete = async (req, res) => {
     });
   }
 };
+
+exports.addBook = async (req, res) => {
+  const { userId, bookId } = req.params;
+
+  try {
+    let response = await userService.addBook(userId, bookId);
+
+    return res.send(response);
+  } catch (err) {
+    return res.status(err.status || 500).send({
+      message: err.message || "Algum erro aconteceu ao listar os livros!",
+    });
+  }
+};

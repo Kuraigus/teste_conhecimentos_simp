@@ -1,11 +1,14 @@
 const User = require("../../model/user.model");
 
 exports.create = async (nome, email, senha, profilePicture) => {
+  let catalogo;
+
   const user = new User({
     nome,
     email,
     senha,
     profilePicture,
+    catalogo,
   });
 
   return await user.save();
@@ -33,4 +36,12 @@ exports.update = async (userId, nome, email, senha) => {
 
 exports.delete = async (userId) => {
   return await User.findByIdAndRemove(userId);
+};
+
+exports.addBook = async (userId, bookId) => {
+  return User.findByIdAndUpdate(
+    userId,
+    { $push: { catalogo: bookId } },
+    { new: true, upsert: true }
+  );
 };
