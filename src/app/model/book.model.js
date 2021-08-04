@@ -2,10 +2,22 @@ const mongoose = require("mongoose");
 
 const BookSchema = mongoose.Schema(
   {
-    titulo: String,
-    autor: String,
-    editora: String,
-    edicao: String,
+    titulo: {
+      type: String,
+      required: true,
+    },
+    autor: {
+      type: String,
+      required: true,
+    },
+    editora: {
+      type: String,
+      required: true,
+    },
+    edicao: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

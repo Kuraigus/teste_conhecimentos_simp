@@ -1,10 +1,30 @@
 const mongoose = require("mongoose");
 
+const validateEmail = (email) => {
+  const emailRegexp =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+  return emailRegexp.test(email);
+};
+
 const UserSchema = mongoose.Schema(
   {
-    nome: String,
-    email: String,
-    senha: String,
+    nome: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      validate: {
+        validator: validateEmail,
+        message: "Email nao valido",
+      },
+    },
+    senha: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
