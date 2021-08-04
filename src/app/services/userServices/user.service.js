@@ -1,7 +1,10 @@
 const userRepository = require("../../repository/userRepository/user.repository");
+const cloudinaryRepository = require("../../repository/cloudinaryRepository/cloudinary.repository");
 
-exports.create = async (nome, email, senha) => {
-  const response = await userRepository.create(nome, email, senha);
+exports.create = async (nome, email, senha, path) => {
+  const { url } = await cloudinaryRepository.uploadProfilePicture(path);
+
+  const response = await userRepository.create(nome, email, senha, url);
 
   if (response) return response;
 

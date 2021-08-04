@@ -1,10 +1,11 @@
 const User = require("../../model/user.model");
 
-exports.create = async (nome, email, senha) => {
+exports.create = async (nome, email, senha, profilePicture) => {
   const user = new User({
     nome,
     email,
     senha,
+    profilePicture,
   });
 
   return await user.save();

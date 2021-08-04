@@ -2,9 +2,10 @@ const userService = require("../services/userServices/user.service");
 
 exports.create = async (req, res) => {
   const { nome, email, senha } = req.body;
+  const { path } = req.file;
 
   try {
-    const response = await userService.create(nome, email, senha);
+    const response = await userService.create(nome, email, senha, path);
 
     return res.send(response);
   } catch (err) {
