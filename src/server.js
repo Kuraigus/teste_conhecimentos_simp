@@ -24,7 +24,7 @@ mongoose
     process.exit();
   });
 
-// app.use(routes);
+app.use(routes);
 
 const port = process.env.PORT || 3333;
 
