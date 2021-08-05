@@ -1,11 +1,13 @@
-const userRepository = require("../../repository/userRepository/user.repository");
-const cloudinaryRepository = require("../../repository/cloudinaryRepository/cloudinary.repository");
-const bookRepository = require("../../repository/bookRepository/book.repository");
+const {
+  BookRepository,
+  CloudinaryRepository,
+  UserRepository,
+} = require("../repository/");
 
 exports.create = async (nome, email, senha, path) => {
-  const { url } = await cloudinaryRepository.uploadProfilePicture(path);
+  const { url } = await CloudinaryRepository.uploadProfilePicture(path);
 
-  const response = await userRepository.create(nome, email, senha, url);
+  const response = await UserRepository.create(nome, email, senha, url);
 
   if (response) return response;
 
@@ -13,7 +15,7 @@ exports.create = async (nome, email, senha, path) => {
 };
 
 exports.findAll = async () => {
-  const response = await userRepository.findAll();
+  const response = await UserRepository.findAll();
 
   if (response) return response;
 
@@ -21,7 +23,7 @@ exports.findAll = async () => {
 };
 
 exports.findOne = async (userId) => {
-  const response = await userRepository.findOne(userId);
+  const response = await UserRepository.findOne(userId);
 
   if (response) return response;
 
@@ -29,7 +31,7 @@ exports.findOne = async (userId) => {
 };
 
 exports.update = async (userId, nome, email, senha) => {
-  const response = await userRepository.update(userId, nome, email, senha);
+  const response = await UserRepository.update(userId, nome, email, senha);
 
   if (response) return response;
 
@@ -37,7 +39,7 @@ exports.update = async (userId, nome, email, senha) => {
 };
 
 exports.delete = async (userId) => {
-  const response = await userRepository.delete(userId);
+  const response = await UserRepository.delete(userId);
 
   if (response) return response;
 
@@ -45,11 +47,11 @@ exports.delete = async (userId) => {
 };
 
 exports.addBook = async (userId, bookId) => {
-  const checkBook = await bookRepository.findOne(bookId);
+  const checkBook = await BookRepository.findOne(bookId);
 
   if (!checkBook) throw { status: 404, message: "ID do livro nao encontrado" };
 
-  const response = await userRepository.addBook(userId, bookId);
+  const response = await UserRepository.addBook(userId, bookId);
 
   if (response) return response;
 

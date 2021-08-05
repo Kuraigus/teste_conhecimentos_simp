@@ -1,4 +1,4 @@
-const User = require("../../model/user.model");
+const User = require("../model/user.model");
 
 exports.create = async (nome, email, senha, profilePicture) => {
   let catalogo;

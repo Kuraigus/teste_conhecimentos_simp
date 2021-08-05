@@ -1,4 +1,4 @@
-const bookRepository = require("../../repository/bookRepository/book.repository");
+const { bookRepository } = require("../repository");
 
 exports.create = async (titulo, autor, editora, edicao) => {
   const response = await bookRepository.create(titulo, autor, editora, edicao);
