@@ -1,11 +1,5 @@
 const mongoose = require("mongoose");
-
-const validateEmail = (email) => {
-  const emailRegexp =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-
-  return emailRegexp.test(email);
-};
+const { validateEmail } = require("../utils/");
 
 const UserSchema = mongoose.Schema(
   {
