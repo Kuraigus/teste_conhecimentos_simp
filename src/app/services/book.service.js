@@ -1,7 +1,7 @@
-const { bookRepository } = require("../repository");
+const { BookRepository } = require("../repository");
 
 exports.create = async (titulo, autor, editora, edicao) => {
-  const response = await bookRepository.create(titulo, autor, editora, edicao);
+  const response = await BookRepository.create(titulo, autor, editora, edicao);
 
   if (response) return response;
 
@@ -9,7 +9,7 @@ exports.create = async (titulo, autor, editora, edicao) => {
 };
 
 exports.findAll = async () => {
-  const response = await bookRepository.findAll();
+  const response = await BookRepository.findAll();
 
   if (response) return response;
 
@@ -17,7 +17,7 @@ exports.findAll = async () => {
 };
 
 exports.findOne = async (bookId) => {
-  const response = await bookRepository.findOne(bookId);
+  const response = await BookRepository.findOne(bookId);
 
   if (response) return response;
 
@@ -25,7 +25,7 @@ exports.findOne = async (bookId) => {
 };
 
 exports.update = async (bookId, titulo, autor, editora, edicao) => {
-  const response = await bookRepository.update(
+  const response = await BookRepository.update(
     bookId,
     titulo,
     autor,
@@ -39,7 +39,7 @@ exports.update = async (bookId, titulo, autor, editora, edicao) => {
 };
 
 exports.delete = async (bookId) => {
-  const response = await bookRepository.delete(bookId);
+  const response = await BookRepository.delete(bookId);
 
   if (response) return response;
 
